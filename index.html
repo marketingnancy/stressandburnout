@@ -2103,6 +2103,8 @@ tr:last-child .comparison__cell {
   .hero__viewers { justify-content: center; }
   .hero__label { font-size: 12px; }
   .talking-stage__video-wrap .video-placeholder { max-width: 260px; max-height: 440px; }
+  .talking-stage__video-wrap { order: -1; }
+  .talking-stage__text-wrap { order: 2; }
   .social-stats { flex-direction: column; gap: 20px; }
   .social-stats__divider { width: 40px; height: 1px; }
   .reviews-grid { grid-template-columns: 1fr; }
@@ -2441,7 +2443,7 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
     <div class="hero__grid">
       <div class="hero__video-wrap reveal">
         <video class="lp-video" autoplay muted loop playsinline preload="metadata">
-          <source src="script1-hero.mp4" type="video/mp4">
+          <source src="hero-video.mp4" type="video/mp4">
         </video>
         <button class="video-mute-toggle" onclick="toggleMute(this)" aria-label="Toggle sound">
           <svg class="mute-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
@@ -2512,15 +2514,7 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
 <!-- ====== SECTION 3: TALKING STAGE ====== -->
 <section class="talking-stage reveal-section">
   <div class="container talking-stage__grid">
-    <div class="talking-stage__video-wrap reveal" style="position:relative;">
-      <video id="talkingVideo" autoplay muted loop playsinline preload="metadata" style="width:100%;max-width:360px;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.3);">
-        <source src="script9-talking.mp4" type="video/mp4">
-      </video>
-      <button class="mute-toggle" data-video="talkingVideo" aria-label="Unmute video">
-        <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-      </button>
-    </div>
-    <div>
+    <div class="talking-stage__text-wrap">
       <div class="section-label talking-stage__label reveal">The talking stage</div>
       <h2 class="talking-stage__headline reveal reveal-delay-1">
         The talking stage is actually a <em>war crime.</em>
@@ -2534,6 +2528,14 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
       <p class="talking-stage__punchline reveal reveal-delay-3">
         12 settings. All of them show up on time.
       </p>
+    </div>
+    <div class="talking-stage__video-wrap reveal" style="position:relative;">
+      <video id="talkingVideo" autoplay muted loop playsinline preload="metadata" style="width:100%;max-width:360px;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.3);">
+        <source src="midstory-video.mp4" type="video/mp4">
+      </video>
+      <button class="mute-toggle" data-video="talkingVideo" aria-label="Unmute video">
+        <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+      </button>
     </div>
   </div>
 </section>
